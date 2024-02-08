@@ -8,5 +8,7 @@
 | Suyoung Jang |
 | Miri Kim |
 ## Screenshots
-![ExerciseB.gif](https://github.com/miri-j-kim/Lab4/blob/main/ExerciseB.gif)
-![ExerciseC.gif](https://github.com/miri-j-kim/Lab4/blob/main/ExerciseC.gif)
+### Exercise B
+![Exercise B final output](https://github.com/miri-j-kim/Lab4/blob/main/ExerciseB.gif)
+### Exercise C
+![Exercise C Final Output](https://github.com/miri-j-kim/Lab4/blob/main/ExerciseC.gif)
