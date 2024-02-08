@@ -1,9 +1,10 @@
 <!--
 =========================================================
-Name        : index.html
+Name        : flex.html
 Assignment  : Lab 4 Exercise C
 Author(s)   : Mahdi Ansari, William Arthur Philip Louis
-Submission  : May 21, 2030
+Edited by   : Suyoung Jang, Miri Kim
+Submission  : Feb 7, 2024
 Description : Flex Layouts.
 =========================================================
 -->
@@ -16,25 +17,6 @@ Description : Flex Layouts.
 		This tag is essential for responsive design as it tells the browser how to control the page's dimensions and scaling.
 	-->
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-
-	<style>	
-		/* Remove borders at the end, they have been add just for detecting positions of items*/	
-		div {
-			border: 1px dashed gray;	
-		}
-		.row{ 
-			border: 1px solid red;			
-		}
-		.large {
-			border: 1px solid blue;	
-		}
-		.medium {
-			border: 1px solid green;	
-		}
-		.small {
-			border: 1px solid yellow;	
-		}		
-	</style>
 
 	<style>
 		/* CSS for menu. You don't need to touch this part */
@@ -58,61 +40,70 @@ Description : Flex Layouts.
 
 	<style>
 		* {
-			/*
-			To have the borders included in the total width calculation of your elements,
-			so that a 70% width and a 30% width element truly add up to 100% including their borders,
-			Apply border-box to all elements
-			*/
 			box-sizing: border-box;
 		}
         body { margin: 0; padding: 0; }
         img { max-width: 100%; height: auto; }
-        .container { 
-			/*I need some CSS codes.*/
-		 }
         .header, .footer { background-color: #f2f2f2; text-align: center; padding: 10px; width: 100%;}
 		.body { 
-			/*I need some CSS codes.*/
+			display: flex;
+			flex-direction: row;
+			flex-wrap: no-wrap;
 		}
         .main { 
-			padding: 15px; 
-			/*I need some CSS codes.*/
+			padding: 15px;
 		}
-        
         .news-item { padding: 10px; }
         .row { 
-			/*I need some CSS codes.*/
+			display: flex;
+			flex-direction: row;
+			flex-wrap: wrap;
 		}
-        
 
         @media screen and (min-width: 769px) {
-            .menu { width: 150px; }     
-			.large { 
-				/*I need some CSS codes.*/
+            .menu { width: 150px; padding-right: 70px; }     
+			.large {
+				width: 100%;
 			}
 			.medium { 
-				/*I need some CSS codes.*/
+				width: 70%;
 			}
 			.small { 
-				/*I need some CSS codes.*/
-			 }       
+				width: 30%;
+			}       
         }
 
         @media screen and (max-width: 768px) {
 			.body { 
-				/*I need some CSS codes.*/
+				flex-wrap: wrap;
 			}
             .menu ul { 
-				/*I need some CSS codes.*/
-			 }            
-            /*I need some CSS codes.*/
+				width: 100%;
+				display: flex;
+				flex-direction: row;
+			}            
+            .medium {
+				width: 60%;
+			}
+			.small {
+				width:40%;
+			}
+			.menu {
+				width: 100%;
+			}
         }
 
         @media screen and (max-width: 480px) {
+			row {
+				flex-direction: column;
+			}
+			img {
+				width: 100%;
+			}
             .news-item header h1 { font-size: 18px; }
             .medium, .small { 
-				/*I need some CSS codes.*/
-			 }
+				width: 100%;
+			}
         }
     </style>
 </head>
@@ -170,7 +161,7 @@ Description : Flex Layouts.
 					<!-- Medium news item -->
 					<div class="medium news-item">
 						<header>
-							<h1>Your Name Takes a Historic Spacewalk Near the ISS</h1>
+							<h1>Miri Takes a Historic Spacewalk Near the ISS</h1>
 						</header>
 						<img src="images/medium.jpg" alt="Medium Image">
 						<article>
